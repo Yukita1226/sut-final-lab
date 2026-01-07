@@ -1,7 +1,6 @@
 package test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/asaskevich/govalidator"
@@ -22,9 +21,6 @@ func TestXxx(t *testing.T) {
 		}
 
 		ok, err := govalidator.ValidateStruct(e)
-		if err != nil {
-			fmt.Printf("t: %v\n", err.Error())
-		}
 
 		g.Expect(ok).To(BeTrue())
 		g.Expect(err).To(BeNil())
